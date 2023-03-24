@@ -253,7 +253,7 @@ func (ch LChannel) assertFunction() (*LFunction, bool) { return nil, false }
 type LInt64 int64
 
 func (it LInt64) String() string                     { return strconv.FormatInt(int64(it), 10) }
-func (it LInt64) Type() LValueType                   { return LTNumber }
+func (it LInt64) Type() LValueType                   { return LTInt64 }
 func (it LInt64) assertFloat64() (float64, bool)     { return 0, false }
 func (it LInt64) assertString() (string, bool)       { return "", false }
 func (it LInt64) assertFunction() (*LFunction, bool) { return nil, false }
